@@ -66,7 +66,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Appviacep"),
+        backgroundColor: const Color.fromARGB(255, 255, 214, 64),
+        //shadowColor: Colors.amberAccent,
+        title: const Text(
+          "Appviacep",
+          style: TextStyle(color: Color.fromARGB(155, 0, 0, 0)),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -74,6 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             TextField(
               controller: cepController,
+              //Troca o teclado de texto somente para números
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(labelText: "Digite o CEP"),
             ),
